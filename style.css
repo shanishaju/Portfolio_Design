@@ -1,0 +1,288 @@
+*{
+    font-family: "Dancing Script", cursive;
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    /* font-family: serif; */
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative; 
+}
+.navbar{
+    display: flex;
+    width: 85%; 
+    justify-content: space-between;
+    margin-left: 100px;
+    align-items: center;
+}
+#logo
+{
+    width: 130px;
+}
+.listitem{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 10px;
+}
+.link{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+.link:hover{
+    color: red;
+}
+.title {
+     margin-left: 8%;
+     margin-top: 13%;
+
+}
+.title h1{
+    font-size: 53px ;
+    padding-bottom: 25px;
+
+}
+#lastname{
+    color: orange;
+}
+
+#download{
+    background-color: black;
+    color: aliceblue;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 6px;
+    /* display: inline-block;  */
+}
+.images{
+    width: 45%;
+    height: 70%;
+    position:absolute;
+    right: 30px;
+    bottom: 0px;
+}
+ /* image moving */
+.imagegroup{
+    position: absolute;
+    height: 100%;
+    left: 50%; /* initital placing */
+    bottom: 0px;
+    transform: translate(-50%); /*remove scroll */
+    transition: bottom 1s,left 2s; /*for movement time*/
+}  
+.images:hover #girl{
+    left: 40%;
+}
+.images:hover #shape{
+    bottom: 50px;
+}
+
+#about{
+    margin: 20% 8% 0 8%;
+}
+
+.heading{
+    text-align: center;
+    margin-top: 13px;
+
+}
+.heading h1{
+    font-size: 35px;
+}
+.heading span{
+    color: green;
+    font-size: 20px;
+}
+
+/* css grid system 
+  section part ne drid aakan  Display grid use aakua
+ Display:grid -->to create section
+ colums --> grid-template-column
+ rows --> grid-template-row
+craete gap-->
+ colum-gap cheyyan --> colum-gap
+ rows-gap --> row-gap
+ gap --> for both rows an colums
+*/ 
+.about-content{
+    display: grid; 
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.about-image img{
+    width: 80%;
+}
+.about-details{
+    margin-top: 25px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.about-details p{
+    text-align: justify;
+
+}
+.information{
+    margin-top: 20px;
+}
+.info-box{
+    margin-bottom: 20px;
+
+}
+.info-box span{
+    margin-left: 15px;
+}
+
+#skills{
+    margin: 8% 8% 0% 8%;
+}
+.skill-container{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem; /* 1rem  = 16px*/
+    margin-top: 20px;
+}
+.skill-image img{
+    width: 90%;
+}
+.bar-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0px;
+    margin-bottom: 2rem;
+    align-items: center;
+    position: relative;
+}
+.bar-container span{
+    font-size: 20px;
+    font-weight: 600;
+}
+.bar-box{
+    width: 100%;
+    height: 0.5rem;
+    background-color: black;
+    position: absolute; /* */
+    bottom: 0px;
+    left: 0px;
+}
+.html-bar{
+    background-color: orange;
+    width: 95%;
+}
+.css-bar{
+    background-color: orange;
+    width: 88%;
+}
+.js-bar{
+    background-color: orange;
+    width: 89%;
+}
+.react-bar{
+    background-color: orange;
+    width: 85%;
+}
+.icon-set{
+
+    display: flex;
+    align-items: center; /* verticaly center */
+    justify-content: center; /* horizontally center  */
+    margin-top: 3%;
+    
+    
+}
+.icon , .up-arrow{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 10px;
+  
+}
+.icon i{
+    font-size: 30px;
+    color: black;
+}
+
+.icon:hover{
+    background-color: orange;
+    /* color combination --> linear gradient*/
+    /* background-image: linear-gradient(direction ,colors) */
+     background-image: linear-gradient(to top left,rgb(246, 67, 67),orange);
+
+}
+
+/* .sample{
+    width: 70px;
+    height: 70px;
+    border: 2px solid black;
+    background-image: linear-gradient(to bottom left, black, rgb(237, 234, 234));
+
+} */
+
+.icon:hover i{
+    color: white;
+    animation: shake 0.75s;
+    
+    
+}
+@keyframes shake{
+    10%{
+        transform: rotate(15deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    30%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+}
+
+/* create animation */
+
+/* animation: name duration//total duration//;
+@keyframes name
+{
+    10%//duration//{
+        property: value
+    }
+    50%{
+        property:value
+    }
+} */
+footer p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 30px 20px 30px 0px;
+}
+
+.up-arrow{
+
+    /* background-image: linear-gradient(to top left,rgb(246, 67, 67),orange); */
+    float: right; /*place right*/
+    margin: 30px 20px 30px 0px;
+    background-image: linear-gradient(to top left,rgb(246, 67, 67),orange);
+
+}
+/* .up-arrow:hover{
+    background-image: linear-gradient(to top left,rgb(246, 67, 67),orange);
+
+} */
+.up-arrow:hover i{
+ color: white;
+ /* background-image: linear-gradient(to top left,rgb(246, 67, 67),orange); */
+}
+html{
+    scroll-behavior: smooth;
+}
